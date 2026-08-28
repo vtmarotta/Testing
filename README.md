@@ -1,2 +1,96 @@
-# Testing
-Testing out code for a website / what am I even doing?
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        /* Layout and spacing */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        
+        /* Header section */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid #ddd;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #222;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #666;
+        }
+        
+        /* Project section */
+        .section {
+            margin: 40px 0;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .section h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        
+        /* Links */
+        a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>[Your Name]</h1>
+        <p>Mechanical Engineer & Problem Solver</p>
+    </header>
+
+    <div class="section">
+        <h2>About Me</h2>
+        <p>I specialize in mechanical engineering, structural analysis, and material composition. Outside of the lab, you can usually find me perfecting complex crochet afghan patterns or baking homemade graham-style cookies.</p>
+    </div>
+
+    <div class="section">
+        <h2>Recent Projects</h2>
+        
+        <h3>Finger-Save Goalkeeper Gloves</h3>
+        <p>Researched and analyzed the load-distribution mechanisms and material composition of segmented plastic protective spines in modern goalkeeper gloves, reviewing current patents to identify design improvements.</p>
+        
+        <h3>Cantilever Beam Analysis</h3>
+        <p>Calculated complex displacement and load equations for cantilever beam models, applying function transformations and advanced polynomial division.</p>
+    </div>
+
+    <div class="section">
+        <h2>Contact</h2>
+        <p>Connect with me on <a href="#">LinkedIn</a> or send an email to <a href="mailto:your.email@example.com">your.email@example.com</a>.</p>
+    </div>
+</div>
+
+</body>
+</html>
