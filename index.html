@@ -22,20 +22,36 @@
             padding: 20px;
         }
         
-        /* Header section */
+        /* Header section (Now with flexbox for the circular image) */
         header {
-            text-align: center;
             padding: 40px 0;
             border-bottom: 2px solid #ddd;
         }
-        header h1 {
+        .profile-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+        }
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* This makes the image a perfect circle */
+            object-fit: cover;
+            border: 3px solid #0056b3;
+        }
+        .header-text {
+            text-align: left;
+        }
+        .header-text h1 {
             margin: 0;
             font-size: 2.5em;
             color: #222;
         }
-        header p {
+        .header-text p {
             font-size: 1.2em;
             color: #666;
+            margin: 5px 0 0 0;
         }
         
         /* Section styling */
@@ -61,13 +77,13 @@
             align-items: flex-start;
         }
         .project-image {
-            width: 250px; /* Fixed width for the image */
+            width: 250px; 
             height: auto;
             border-radius: 6px;
             border: 1px solid #eee;
         }
         .project-text {
-            flex: 1; /* Takes up the remaining space */
+            flex: 1; 
         }
         .project-text h3 {
             margin-top: 0;
@@ -75,8 +91,15 @@
 
         /* Make it stack vertically on small phone screens */
         @media (max-width: 600px) {
-            .project-card {
+            .profile-header {
                 flex-direction: column;
+                text-align: center;
+            }
+            .header-text {
+                text-align: center;
+            }
+            .project-card {
+                flex-direction: column-reverse; /* Keeps the image on top for mobile users */
             }
             .project-image {
                 width: 100%;
@@ -98,8 +121,14 @@
 
 <div class="container">
     <header>
-        <h1>[Your Name]</h1>
-        <p>Mechanical Engineer & Problem Solver</p>
+        <div class="profile-header">
+            <!-- Replace this src with your actual headshot file name -->
+            <img class="profile-pic" src="https://via.placeholder.com/150" alt="My Profile Picture">
+            <div class="header-text">
+                <h1>[Your Name]</h1>
+                <p>Mechanical Engineer & Problem Solver</p>
+            </div>
+        </div>
     </header>
 
     <div class="section">
@@ -114,22 +143,22 @@
         
         <!-- Project 1 -->
         <div class="project-card">
-            <!-- Replace the src below with your actual image file name once uploaded -->
-            <img class="project-image" src="https://via.placeholder.com/400x300?text=Glove+Diagram" alt="Diagram of a goalkeeper glove">
             <div class="project-text">
                 <h3>Finger-Save Goalkeeper Gloves</h3>
                 <p>Researched and analyzed the load-distribution mechanisms and material composition of segmented plastic protective spines in modern goalkeeper gloves, reviewing current patents to identify design improvements.</p>
             </div>
+            <!-- The image is now placed BELOW the text in the HTML so it appears on the right -->
+            <img class="project-image" src="https://via.placeholder.com/400x300?text=Glove+Diagram" alt="Diagram of a goalkeeper glove">
         </div>
         
         <!-- Project 2 -->
         <div class="project-card">
-            <!-- Replace the src below with your actual image file name once uploaded -->
-            <img class="project-image" src="https://via.placeholder.com/400x300?text=Beam+Equation" alt="Cantilever beam equation graph">
             <div class="project-text">
                 <h3>Cantilever Beam Analysis</h3>
                 <p>Calculated complex displacement and load equations for cantilever beam models, applying function transformations and advanced polynomial division.</p>
             </div>
+            <!-- The image is now placed BELOW the text in the HTML so it appears on the right -->
+            <img class="project-image" src="https://via.placeholder.com/400x300?text=Beam+Equation" alt="Cantilever beam equation graph">
         </div>
     </div>
 
