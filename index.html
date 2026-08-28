@@ -38,7 +38,7 @@
             color: #666;
         }
         
-        /* Project section */
+        /* Section styling */
         .section {
             margin: 40px 0;
             background: white;
@@ -50,6 +50,37 @@
             border-bottom: 2px solid #0056b3;
             padding-bottom: 10px;
             display: inline-block;
+        }
+        
+        /* Project Layout (Side-by-Side) */
+        .project-card {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            align-items: flex-start;
+        }
+        .project-image {
+            width: 250px; /* Fixed width for the image */
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #eee;
+        }
+        .project-text {
+            flex: 1; /* Takes up the remaining space */
+        }
+        .project-text h3 {
+            margin-top: 0;
+        }
+
+        /* Make it stack vertically on small phone screens */
+        @media (max-width: 600px) {
+            .project-card {
+                flex-direction: column;
+            }
+            .project-image {
+                width: 100%;
+            }
         }
         
         /* Links */
@@ -67,23 +98,39 @@
 
 <div class="container">
     <header>
-        <h1>Vanessa T. Krasnicki</h1>
-        <p>Bachelor of Science, Mechanical Engineering, CCSU</p>
+        <h1>[Your Name]</h1>
+        <p>Mechanical Engineer & Problem Solver</p>
     </header>
 
     <div class="section">
         <h2>About Me</h2>
-        <p>Coming soon.</p>
+        <p>I am a mechanical engineer specializing in structural analysis and material composition. I focus on breaking down complex mechanical problems into practical, optimized designs.</p>
+        <p>My recent work involves calculating displacement and load equations for cantilever beam models, as well as analyzing the load-distribution mechanisms of segmented plastic protective spines in finger-save goalkeeper gloves. I enjoy diving into technical research and patents to identify ways to improve existing mechanical systems.</p>
+        <p>When I am away from my desk, I apply that same focus on structure and precision to my offline hobbies—whether I am mapping out complex crochet afghan patterns or dialing in the exact dough temperature to bake the perfect batch of homemade graham-style cookies.</p>
     </div>
 
     <div class="section">
         <h2>Recent Projects</h2>
         
-        <h3>Finger-Save Goalkeeper Gloves</h3>
-        <p>Coming soon.</p>
+        <!-- Project 1 -->
+        <div class="project-card">
+            <!-- Replace the src below with your actual image file name once uploaded -->
+            <img class="project-image" src="https://via.placeholder.com/400x300?text=Glove+Diagram" alt="Diagram of a goalkeeper glove">
+            <div class="project-text">
+                <h3>Finger-Save Goalkeeper Gloves</h3>
+                <p>Researched and analyzed the load-distribution mechanisms and material composition of segmented plastic protective spines in modern goalkeeper gloves, reviewing current patents to identify design improvements.</p>
+            </div>
+        </div>
         
-        <h3>Cantilever Beam Analysis</h3>
-        <p>Coming soon.</p>
+        <!-- Project 2 -->
+        <div class="project-card">
+            <!-- Replace the src below with your actual image file name once uploaded -->
+            <img class="project-image" src="https://via.placeholder.com/400x300?text=Beam+Equation" alt="Cantilever beam equation graph">
+            <div class="project-text">
+                <h3>Cantilever Beam Analysis</h3>
+                <p>Calculated complex displacement and load equations for cantilever beam models, applying function transformations and advanced polynomial division.</p>
+            </div>
+        </div>
     </div>
 
     <div class="section">
