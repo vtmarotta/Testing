@@ -22,7 +22,7 @@
             padding: 20px;
         }
         
-        /* Header section (Now with flexbox for the circular image) */
+        /* Header section */
         header {
             padding: 40px 0;
             border-bottom: 2px solid #ddd;
@@ -36,7 +36,7 @@
         .profile-pic {
             width: 120px;
             height: 120px;
-            border-radius: 50%; /* This makes the image a perfect circle */
+            border-radius: 50%;
             object-fit: cover;
             border: 3px solid #0056b3;
         }
@@ -89,7 +89,50 @@
             margin-top: 0;
         }
 
-        /* Make it stack vertically on small phone screens */
+        /* Experience List Styling */
+        .experience-item {
+            margin-bottom: 25px;
+            border-left: 3px solid #e0e0e0;
+            padding-left: 15px;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+        .job-title {
+            margin: 0;
+            font-size: 1.2em;
+            color: #222;
+        }
+        .job-date {
+            color: #666;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        .company-name {
+            font-style: italic;
+            color: #555;
+            margin: 0 0 10px 0;
+        }
+
+        /* Hobbies Gallery Row */
+        .hobbies-gallery {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .hobbies-gallery img {
+            flex: 1;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+
+        /* Mobile adjustments */
         @media (max-width: 600px) {
             .profile-header {
                 flex-direction: column;
@@ -99,10 +142,19 @@
                 text-align: center;
             }
             .project-card {
-                flex-direction: column-reverse; /* Keeps the image on top for mobile users */
+                flex-direction: column-reverse;
             }
             .project-image {
                 width: 100%;
+            }
+            .job-header {
+                flex-direction: column;
+            }
+            .hobbies-gallery {
+                flex-direction: column;
+            }
+            .hobbies-gallery img {
+                height: auto;
             }
         }
         
@@ -122,7 +174,6 @@
 <div class="container">
     <header>
         <div class="profile-header">
-            <!-- Replace this src with your actual headshot file name -->
             <img class="profile-pic" src="https://via.placeholder.com/150" alt="My Profile Picture">
             <div class="header-text">
                 <h1>[Your Name]</h1>
@@ -135,30 +186,81 @@
         <h2>About Me</h2>
         <p>I am a mechanical engineer specializing in structural analysis and material composition. I focus on breaking down complex mechanical problems into practical, optimized designs.</p>
         <p>My recent work involves calculating displacement and load equations for cantilever beam models, as well as analyzing the load-distribution mechanisms of segmented plastic protective spines in finger-save goalkeeper gloves. I enjoy diving into technical research and patents to identify ways to improve existing mechanical systems.</p>
-        <p>When I am away from my desk, I apply that same focus on structure and precision to my offline hobbies—whether I am mapping out complex crochet afghan patterns or dialing in the exact dough temperature to bake the perfect batch of homemade graham-style cookies.</p>
     </div>
 
+    <!-- MOVED SECTION: Recent Projects -->
     <div class="section">
         <h2>Recent Projects</h2>
         
-        <!-- Project 1 -->
         <div class="project-card">
             <div class="project-text">
                 <h3>Finger-Save Goalkeeper Gloves</h3>
                 <p>Researched and analyzed the load-distribution mechanisms and material composition of segmented plastic protective spines in modern goalkeeper gloves, reviewing current patents to identify design improvements.</p>
             </div>
-            <!-- The image is now placed BELOW the text in the HTML so it appears on the right -->
             <img class="project-image" src="https://via.placeholder.com/400x300?text=Glove+Diagram" alt="Diagram of a goalkeeper glove">
         </div>
         
-        <!-- Project 2 -->
         <div class="project-card">
             <div class="project-text">
                 <h3>Cantilever Beam Analysis</h3>
                 <p>Calculated complex displacement and load equations for cantilever beam models, applying function transformations and advanced polynomial division.</p>
             </div>
-            <!-- The image is now placed BELOW the text in the HTML so it appears on the right -->
             <img class="project-image" src="https://via.placeholder.com/400x300?text=Beam+Equation" alt="Cantilever beam equation graph">
+        </div>
+    </div>
+
+    <!-- Work Experience -->
+    <div class="section">
+        <h2>Work Experience</h2>
+        
+        <div class="experience-item">
+            <div class="job-header">
+                <h3 class="job-title">Mechanical Engineer</h3>
+                <span class="job-date">August 2024 – Present</span>
+            </div>
+            <p class="company-name">[Company Name], [City, State]</p>
+            <ul>
+                <li>Write a bullet point here detailing a specific engineering achievement or daily responsibility.</li>
+                <li>Write a second bullet point highlighting a problem you solved or a process you improved.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-header">
+                <h3 class="job-title">Engineering Intern</h3>
+                <span class="job-date">May 2023 – August 2023</span>
+            </div>
+            <p class="company-name">[Previous Company Name], [City, State]</p>
+            <ul>
+                <li>Assisted with structural analysis and data collection for ongoing mechanical designs.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Volunteer Experience -->
+    <div class="section">
+        <h2>Volunteer Experience</h2>
+        
+        <div class="experience-item">
+            <div class="job-header">
+                <h3 class="job-title">[Volunteer Role / Title]</h3>
+                <span class="job-date">January 2022 – Present</span>
+            </div>
+            <p class="company-name">[Organization Name]</p>
+            <p>Describe your volunteer work here. For example: Mentored local high school students in introductory physics and mathematics, helping them prepare for college-level engineering coursework.</p>
+        </div>
+    </div>
+
+    <!-- Personal Hobbies with Images -->
+    <div class="section">
+        <h2>Personal Hobbies</h2>
+        <p>When I am not solving engineering problems, I enjoy applying that same focus on structure and precision to my offline hobbies. I am an avid crafter, frequently working through complex crochet afghan patterns. I am also passionate about baking and spend my free time perfecting recipes, specifically dialing in the exact dough temperature and texture adjustments to bake homemade graham-style Scooby Snack cookies.</p>
+        
+        <!-- Image Row -->
+        <div class="hobbies-gallery">
+            <img src="https://via.placeholder.com/300x200?text=Crochet+Afghan" alt="My crochet project">
+            <img src="https://via.placeholder.com/300x200?text=Scooby+Snack+Cookies" alt="Homemade cookies">
+            <img src="https://via.placeholder.com/300x200?text=Other+Hobby" alt="Additional hobby photo">
         </div>
     </div>
 
