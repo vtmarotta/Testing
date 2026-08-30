@@ -221,6 +221,29 @@
             z-index: 2; /* Ensures the popped-up photo stays above the others */
             position: relative;
         }
+
+        /* Dropdown Styling */
+        details {
+            margin-top: 20px;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #0056b3;
+            text-align: center;
+            padding: 12px;
+            background-color: #f1f7fd;
+            border-radius: 6px;
+            list-style: none; 
+            transition: background-color 0.3s ease;
+            border: 1px dashed #0056b3;
+        }
+        summary:hover {
+            background-color: #e6f0fa;
+        }
+        summary::-webkit-details-marker {
+            display: none; /* Hides the default arrow icon */
+        }
     </style>
 </head>
 <body>
@@ -291,13 +314,14 @@
             <img class="project-image" src="images/GIT.png" alt="Research Project">
         </div>
 
-          <div class="project-card">
+        
+       /*   <div class="project-card">
             <div class="project-text">
                 <h3>Purchased my First 3D Printer (2026)</h3>
                 <p>Projects coming soon.</p>
             </div>
             <img class="project-image" src="images/3D.jpg" alt="Research Project">
-        </div>
+        </div> */
 
          <div class="project-card">
             <div class="project-text">
@@ -317,6 +341,13 @@
             <img class="project-image" src="images/RCMill2.jpg" alt="Tool">
         </div>
 
+<!-- Your top projects are up here, visible by default -->
+
+    <details>
+        <summary>See More Projects ...</summary>
+        
+        <!-- Paste EVERY older project-card right here -->
+        
          <div class="project-card">
             <div class="project-text">
                 <h3>Cold Forged a Ring (2024)</h3>
@@ -362,6 +393,10 @@
             <img class="project-image" src="images/Court.jpeg" alt="Truck Assembly">
         </div>
 
+        <!-- Keep pasting the rest of them here -->
+
+    </details>
+        
         <!-- Early Manufacturing Projects -->
     <div class="section">
         <h2>High School Manufacturing (2022-2023)</h2>
