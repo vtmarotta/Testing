@@ -244,6 +244,17 @@
         summary::-webkit-details-marker {
             display: none; /* Hides the default arrow icon */
         }
+
+        /* Toggle Text for the Dropdown */
+        .text-open {
+            display: none; /* Hides 'See Less' by default */
+        }
+        details[open] .text-closed {
+            display: none; /* Hides 'See More' when open */
+        }
+        details[open] .text-open {
+            display: inline; /* Shows 'See Less' when open */
+        }
     </style>
 </head>
 <body>
@@ -344,7 +355,10 @@
 <!-- Your top projects are up here, visible by default -->
 
     <details>
-        <summary>See More Projects</summary>
+       <summary>
+            <span class="text-closed">See More Projects ...</span>
+            <span class="text-open">See Less Projects</span>
+        </summary>
         
         <!-- Paste EVERY older project-card right here -->
         
