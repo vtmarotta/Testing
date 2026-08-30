@@ -76,9 +76,16 @@
             margin-bottom: 30px;
             align-items: flex-start;
         }
-        .project-image {
+        /*.project-image {
             width: 250px; 
             height: auto;
+            border-radius: 6px;
+            border: 1px solid #eee;
+        }*/
+            .project-image {
+            width: 250px; 
+            height: 200px; /* Forces every image to be exactly this tall */
+            object-fit: cover; /* Crops perfectly to fit without stretching */
             border-radius: 6px;
             border: 1px solid #eee;
         }
