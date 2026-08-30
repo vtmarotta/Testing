@@ -191,6 +191,29 @@
             transform: translateY(-4px) scale(1.05); /* The fun "pop" effect */
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
+
+        /* Mini Photo Gallery */
+        .mini-gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .mini-photo {
+            width: 110px; /* Big enough to see, small enough to fit 20 */
+            height: 110px;
+            object-fit: cover; /* Prevents the images from stretching */
+            border-radius: 12px; /* Gives them a friendly, rounded shape */
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+        .mini-photo:hover {
+            transform: translateY(-5px) scale(1.15); /* The pop-up animation */
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            border-color: #0056b3;
+            z-index: 2; /* Ensures the popped-up photo stays above the others */
+            position: relative;
+        }
     </style>
 </head>
 <body>
@@ -303,6 +326,26 @@
             </div>
             <img class="project-image" src="images/Truck Assembly.png" alt="Truck Assembly">
         </div>
+
+        <!-- Early Manufacturing Projects -->
+    <div class="section">
+        <h2>High School Manufacturing</h2>
+        <p>A collection of early hands-on machining, fabrication, and manufacturing projects.</p>
+        
+        <div class="mini-gallery-container">
+            <!-- Replace these srcs with your actual image file names -->
+            <img class="mini-photo" src="images/mfg1.jpg" alt="Manufacturing project">
+            <img class="mini-photo" src="images/mfg2.jpg" alt="Manufacturing project">
+            <img class="mini-photo" src="images/mfg3.jpg" alt="Manufacturing project">
+            <img class="mini-photo" src="images/mfg4.jpg" alt="Manufacturing project">
+            <img class="mini-photo" src="images/mfg5.jpg" alt="Manufacturing project">
+            <img class="mini-photo" src="images/mfg6.jpg" alt="Manufacturing project">
+            <img class="mini-photo" src="images/mfg7.jpg" alt="Manufacturing project">
+            <img class="mini-photo" src="images/mfg8.jpg" alt="Manufacturing project">
+            <img class="mini-photo" src="images/mfg9.jpg" alt="Manufacturing project">
+            <img class="mini-photo" src="images/mfg10.jpg" alt="Manufacturing project">
+        </div>
+    </div>
     </div>
     
     <!-- Work Experience -->
